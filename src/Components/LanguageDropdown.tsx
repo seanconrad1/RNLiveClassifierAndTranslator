@@ -8,7 +8,7 @@ const showLanguageDropdown = ({
   pickerSelectStyles,
   setLanguage,
 }) => {
-  //if adding more languages, map codes from this list:
+  // More languages:
   // https://cloud.google.com/translate/docs/languages
   const availableLanguages = [
     { label: "Spanish", value: "es" },

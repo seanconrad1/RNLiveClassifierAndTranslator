@@ -1,8 +1,4 @@
 //--------------------------------------------------------------
-// Helper asynchronous function to invoke the Google Translation
-// API and fetch the translated text. Excellent documentation
-// for parameters and response data structure is here
-// (Translating text (Basic)):
 // https://cloud.google.com/translate/docs/basic/quickstart
 //
 // NOTE: Here we are using the simple GET with key model. While

@@ -68,6 +68,7 @@ const CameraView = () => {
     }
   };
 
+  // get permissions on mount, load tf and models
   useEffect(() => {
     let isMounted = true;
     Camera.requestPermissionsAsync().then(({ status }) =>
@@ -86,24 +87,13 @@ const CameraView = () => {
     });
   }, []);
 
-  //--------------------------
-  // Run onUnmount routine
-  // for cancelling animation
-  // if running to avoid leaks
-  //--------------------------
   useEffect(() => {
     return () => {
       cancelAnimationFrame(requestAnimationFrameId);
     };
   }, [requestAnimationFrameId]);
 
-  //------------------------------------------------------------------------------
-  // Helper function to handle the camera tensor streams. Here, to keep up reading
-  // input streams, we use requestAnimationFrame JS method to keep looping for
-  // getting better predictions (until we get one with enough confidence level).
-  // More info on RAF:
-  // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
-  //------------------------------------------------------------------------------
+  // Loop that handles each frame
   const handleCameraStream = (imageAsTensors) => {
     const loop = async () => {
       const nextImageTensor = await imageAsTensors.next().value;
