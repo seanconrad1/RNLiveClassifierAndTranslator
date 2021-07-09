@@ -6,6 +6,6 @@ React Native Live Camera Classifier classifies an object in real-time and will a
 
 ##Run the app
 
-- Obtain a Google Translate API key from [here](https://cloud.google.com/translate/docs/setup#node.js)
+- Obtain a Google Translate API key from [here](https://cloud.google.com/translate/docs/setup#node.js) and place it in src/utilities.js
 - `yarn install`
 - `expo start`
