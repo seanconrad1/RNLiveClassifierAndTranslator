@@ -1,10 +1,7 @@
 //--------------------------------------------------------------
 // https://cloud.google.com/translate/docs/basic/quickstart
 //
-// NOTE: Here we are using the simple GET with key model. While
-// this is simple to implement, it is recommended to do a POST
-// with an OAuth key to avoid key tampering. This approach is
-// for instructional purposes ONLY.
+// Using the API key here is for instructional purposes ONLY.
 //---------------------------------------------------------------
 const GoogleTranslateAPI =
   "https://translation.googleapis.com/language/translate/v2";
